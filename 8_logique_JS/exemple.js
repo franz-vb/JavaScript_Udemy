@@ -64,3 +64,114 @@ if(!x < 5) {
 else {
     console.log('x n\'est pas inférieur à 5.');
 }
+
+//42. Les conditions ternaires
+let gareDeDepart = "Valenciennes";
+let gareDArrivee = prompt("Où souhaitez-vous aller ?") || "Gare du Nord";
+let chauffeur    = "Louis-Nicolas";
+
+if ((gareDeDepart != "" || gareDArrivee != "") && chauffeur != "") {
+    alert('Le train va démarrer à destination de ' + gareDArrivee + '.');
+}
+else {
+    alert('Le train ne peut pas démarrer.');
+}
+
+// let x = 1;
+
+// CONDITION TERNAIRE
+// x > 3 ? console.log('X est supérieur à trois') : console.log('X est inférieur à trois');
+
+// if(x > 3) {
+//     console.log('X est supérieur à trois');
+// }
+// else {
+//     console.log('X est inférieur à trois');
+// }
+
+//44. Les boucles (while)
+let i = 1;
+
+while (i < 5) {
+    
+    console.log('Ligne : ' + i);
+    i++;
+
+}
+
+//45. Les boucles (do...while)
+do {
+
+    var prenom = prompt('Quel est votre prénom ?');
+
+} while(prenom == "" || prenom == null)
+
+alert('Bonjour ' + prenom);
+
+//46. Les boucles (for)
+// let i = 1;
+
+// while (i < 5) {
+    
+//     console.log('Ligne : ' + i);
+//     i++;
+
+// }
+
+// Ici, la boucle "for" fait la même chose que la boucle while au-dessus, mais en 3 lignes
+for (let i = 1; i < 5; i++) {
+    console.log('Ligne : ' + i);
+}
+
+//48. Casser la boucle : break et continue
+let i = 0;
+
+while (i < 5) {
+  
+  // Break
+  if (i == 3) {
+    break;
+  }
+  
+  // Continue
+  // if (i == 3) {
+  //   i++;
+  //   continue;
+  // }
+  
+  console.log('Ligne : ' + i);
+  i++;
+  
+}
+
+//49. Gérer les exceptions
+try {
+    // Erreur ?
+    let recompense = prompt("Choisissez une récompense : épée, arc, haches");
+    let degats;
+    
+    switch(recompense) {
+      case 'épée':
+        degats = 40;
+        break;
+      case 'arc':
+        degats = 30;
+        break;
+      case'haches':
+        degats = 20;
+        break;
+      default:
+        throw new Error('Vous ne pouvez pas tricher.');
+    }
+    
+    alert('Vous avez choisi : ' + recompense + ' (' + degats + ' dégats).');
+  }
+  catch(error) {
+    // Erreur !
+    alert(error);
+  }
+  finally {
+    alert('Fin du programme');
+  }
+
+
