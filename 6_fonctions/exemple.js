@@ -34,7 +34,7 @@ let nombreUn = 4; nombreDeux = 7;
 function addition(nombreA, nombreB) {
   
   let result = nombreA + nombreB;
-  // console.log(result);
+  // console.log(result); // affiche
   return result;
   
 }
