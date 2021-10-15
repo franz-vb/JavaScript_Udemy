@@ -1,3 +1,4 @@
+//64. Correction
 function somme(nombre) { // 3
     
     if(nombre == 1) {
