@@ -1,16 +1,3 @@
-let chien = {
-    race: 'Shiba',
-    poil: 'Court',
-    aboyer: function(){
-        console.log('Ouaf Ouaf');
-    }
+for (let i = 1; i < 5; i++) {
+    console.log('ligne : ' + i);
 }
-
-chien.aboyer();
-
-
-
-
-
-
-
