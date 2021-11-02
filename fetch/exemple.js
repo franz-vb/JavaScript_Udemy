@@ -1,7 +1,9 @@
 /* Récupération de l'info dans l'url via le mot clé id */
 
-const urlParams = new URLSearchParams(window.location.search); //new URLSearchParam est un objet de base de JS qui permet d'utiliser plusieurs méthodes pour traiter les données dans les URL
-const idProduct = urlParams.get("id"); //On utilise la méthode "get" de l'objet "URLSearchParams" afin de récupérer la valeur (dans l'url) qui se trouve dans la clé "id"
+const urlParams = new URLSearchParams(window.location.search); //new URLSearchParam est un objet de base de JS qui permet d'utiliser plusieurs
+                                                            // méthodes pour traiter les données dans les URL
+const idProduct = urlParams.get("id"); //On utilise la méthode "get" de l'objet "URLSearchParams" afin de récupérer la valeur (dans l'url) qui 
+                                        //se trouve dans la clé "id"
 
 /* Déclarations des variables */
 
@@ -21,9 +23,11 @@ function getProductFromId() {
 
         /* Insertion de la data récupérée via l'API dans mon HTML */
 
-        myProduct = data.filter(product => idProduct == product._id); // Cette fonction va filter mon tableau qui contient tous les produits afin de récupérer que mon produit ciblé
-        // product représente l'élément (l'objet) à chaque tour de boucle du tableau. La condition vérifie si l'ID (idProduct) qu'on a récupéré dans l'url
-        // est égale à l'idée de l'élément donc égale à product._id. Si la condition est vraie, filter va mettre dans la varialbe myProduct l'objet (donc product)
+        myProduct = data.filter(product => idProduct == product._id); // Cette fonction va filter mon tableau qui contient tous les 
+        //produits, afin de récupérer que mon produit ciblé
+        //product représente l'élément (l'objet) à chaque tour de boucle du tableau. La condition vérifie si l'ID (idProduct) qu'on a 
+        //récupéré dans l'url est égale à l'id de l'élément donc égale à product._id. Si la condition est vraie, filter va mettre dans 
+        //la varialbe myProduct l'objet (donc product)
 
         /* Insertion des données provenant de mon objet filtré (myProduct) via id vers mes éléments HTML (productTitle, etc...) */
         productTitle.textContent = `${myProduct[0].name}`;
